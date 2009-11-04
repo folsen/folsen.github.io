@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>ique.github.com</title>
-</head>
-<body>
-Yo :)<br/>
-I will be using this page to put up some demos and other open-source related stuff I do.
-</body>
-</html>
+---
+layout: default
+title: "iques' code blog"
+description: "The destination of every code-related writing by Fredrik Olsen"
+---
+{% for page in site.posts limit:5 %}
+{% assign body = page.content %}
+{% include post-div.html %}
+{% endfor %}
+{% if site.posts.length > 5 %}
+<div class="related">
+<h3>More Posts</h3>
+<p>{% for post in site.posts offset:5 %}<a href="{{ post.url }}">{{ post.title }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</p>
+</div>
+{% endif %}

@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 15px Verdana, sans-serif;
+	line-height: 1.8em;
+	color: black;
+	background: #EDF1F3;
+}
+
+#container {
+	width: 54em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.menubar {
+  color: #aaa;
+  line-height: 1.3em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.menubar a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.menubar a:hover {
+  color: #004491;
+}
+
+#header {
+  margin-bottom: 3em;
+  padding-top: 0.3em;
+}
+
+#footer {
+  margin-top: 3em;
+  padding-bottom: 0.3em;
+}
+
+
+h2 {
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1.4em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.3em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+	border-bottom: 1px solid #eee;
+}
+
+h1, .post, .link-post {
+  padding-bottom: 8px;
+	margin-bottom: 48px;
+}
+
+
+.link-post h2 {
+  font-size: 1.4em;
+}
+
+code {
+  background: #f0f0f0;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border: 1px solid #e0e0e0;
+   -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+
+.meta {
+  font-size: 0.8em;
+  color: #999;
+  border-top: 1px solid #eee;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin-top: -0.6em;
+}
+
+.meta a, .content a, .related a {
+  color: #004491;
+  text-decoration: none;
+  border-bottom: 1px dotted #d3dfee;
+}
+
+.meta a:hover, .content a:hover, .related a:hover {
+  border-bottom: 1px solid;
+}
+
+.title a {
+  color: black;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title a:hover {
+  border: none;
+}
+
+.entry-date {
+	float: left;
+	margin-left: -55px;
+	padding-top: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.entry-date div {
+	font-size: 27px;
+	color: #175158;
+}
+
+.video {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+pre {
+  font: 0.9em Monaco, monospace;
+  line-height: 1.4em;
+  display: block;
+  color: white;
+  background: #222;
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  padding: 0.6em;
+}
+		
+.related {
+  padding-top: 1em;
+  color: #aaa;
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.related h3 {
+  font-size: 1.2em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.related p {
+  margin-top: 0.4em;
+}
