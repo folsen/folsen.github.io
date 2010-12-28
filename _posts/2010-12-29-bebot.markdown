@@ -1,0 +1,16 @@
+---
+layout: post
+title: "bebot"
+---
+
+I recently found myself wanting to do some real "hacking" again a couple of days ago and found a post on reddit about a guy who had made a bot that played Bejeweled.
+It didn't make intelligent decisions though so I took it as a challenge to make something better,
+in the end I don't really know if I succeeded. Making a god Bejeweled bot was harder then just making the program know the rules of the game,
+there were some quite difficult image analysis problems involved.
+
+In any case I was very satisfied with the result and it drew a bit of attention, the info page had about 3000 views on the day I posted it on reddit and I currently have
+11 watchers on the repo.
+
+The whole thing was coded in Clojure and I have to say I have really come to love it. I really want to do some more real hacking with it.
+
+If you want to check out the bot or the code take a peek at [the bebot info page](http://ique.github.com/bebot).
