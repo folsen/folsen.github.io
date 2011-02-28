@@ -1,15 +1,166 @@
 ---
 layout: default
-title: "iques' code blog"
-description: "The destination of every code-related writing by Fredrik Olsen"
+title: "Profile"
+description: "A summary of my coding."
 ---
-{% for page in site.posts limit:5 %}
-{% assign body = page.content %}
-{% include post-div.html %}
-{% endfor %}
-{% if site.posts.length > 5 %}
-<div class="related">
-<h3>More Posts</h3>
-<p>{% for post in site.posts offset:5 %}<a href="{{ post.url }}">{{ post.title }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</p>
+<h1>Professional projects</h1>
+<hr>
+
+<div id="profile-wrapper">
+  <div class="big-left-box">
+    <div class="big-frame"></div><br style="clear:both;">
+    <div class="" style="padding-left:0px;padding-top:5px;">
+      <div style="margin-bottom:5px;"><div class="title">Sportprofile</div><div class="year">2010</div><br style="clear:both;"></div>
+      A brandable community with ability for users to add applications on demand.
+      Ruby on Rails
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+
+  <div class="big-top-box">
+    <div class="big-frame"></div>
+    <div class="big-text">
+      <div style="margin-bottom:5px;"><div class="title">RightRental</div><div class="year">2011</div><br style="clear:both;"></div>
+      A horizontally scalable web-scraper built with Clojure.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">Lunicore</span>
+      <div>Various PHP and Rails work at consulting firm.</div>
+      <div class="year">2009</div><div class="tag">#PHP</div>
+    </div>
+  </div>
+
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">Tetra Pak</span>
+      Package specification database with web front-end.
+      <div class="year">2007</div><div class="tag">#ASP.NET</div>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">Hultens</span>
+      Webshop for local furniture store. Before CakePHP.
+      <div class="year">2005</div><div class="tag">#PHP</div>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">Stanstad</span>
+      <div>
+        Community and CMS for sports team.
+      </div>
+      <div class="year">2003</div><div class="tag">#ASP</div>
+    </div>
+  </div>
+  <br style="clear:both;">
 </div>
-{% endif %}
+</div>
+<h1>Weekend projects</h1>
+<hr>
+
+
+<div id="profile-wrapper">
+  <div class="big-left-box">
+    <div class="big-frame"></div><br style="clear:both;">
+    <div class="" style="padding-left:0px;padding-top:5px;">
+      <div style="margin-bottom:5px;"><div class="title">bebot</div><div class="year">2010</div><br style="clear:both;"></div>
+      A bot playing Facebook Bejeweled using a simple AI. Written in Clojure and implementing the java.awt.Robot class for OS interaction.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+
+  <div class="big-top-box">
+    <div class="big-frame"></div>
+    <div class="big-text">
+      <div style="margin-bottom:5px;"><div class="title">notmIRC</div><div class="year">2011</div><br style="clear:both;"></div>
+        A chat client written in CoffeeScript for Node.js using Express, Socket.IO and Mongoose for MongoDB connection. Made to resemble classic mIRC.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">KanaRecog</span>
+        Browser-game to let you train Hiragana and Katakana.
+      <div class="year">2010</div><div class="tag">#Rails</div>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">WordJumble</span>
+      Programming solution to a newspaper wordproblem.
+      <div class="year">2010</div><div class="tag">#Clojure</div>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">Japanese</span>
+      Simple app to share nearly learnt Japanese.
+      <div class="year">2009</div><div class="tag">#Rails</div>
+    </div>
+  </div>
+
+  <div class="small-box">
+    <div class="small-frame"></div>
+    <div class="small-text">
+      <span class="company">mastermind</span>
+      <div>
+        EventMachine based telnet version of mastermind.
+      </div>
+      <div class="year">2008</div><div class="tag">#Ruby</div>
+    </div>
+  </div>
+  <br style="clear:both;">
+</div>
+
+<h1>Puzzle hunts</h1>
+<hr>
+<div id="profile-wrapper" style="width:690px;">
+  <div class="big-left-box">
+    <div class="big-frame"></div><br style="clear:both;">
+    <div class="" style="padding-left:0px;padding-top:5px;">
+      <div style="margin-bottom:5px;"><div class="title">DH Game</div><div class="year">2006-2010</div><br style="clear:both;"></div>
+      A bot playing Facebook Bejeweled using a simple AI. Written in Clojure and implementing the java.awt.Robot class for OS interaction.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+  <div class="big-left-box">
+    <div class="big-frame"></div><br style="clear:both;">
+    <div class="" style="padding-left:0px;padding-top:5px;">
+      <div style="margin-bottom:5px;"><div class="title">iHunt</div><div class="year">2008-2009</div><br style="clear:both;"></div>
+      A bot playing Facebook Bejeweled using a simple AI. Written in Clojure and implementing the java.awt.Robot class for OS interaction.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+  <div class="big-left-box">
+    <div class="big-frame"></div><br style="clear:both;">
+    <div class="" style="padding-left:0px;padding-top:5px;">
+      <div style="margin-bottom:5px;"><div class="title">dekompile</div><div class="year">2010</div><br style="clear:both;"></div>
+      A bot playing Facebook Bejeweled using a simple AI. Written in Clojure and implementing the java.awt.Robot class for OS interaction.
+      <span class="link"><a href="http://sportprofile.com">Live Site</a></span>
+    </div>
+  </div>
+  <br style="clear:both;">
+</div>
+<h3>Various writings about code, few and far between</h3>
+<hr>
+<ul id="posts">
+  {% for post in site.posts %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+</ul>
