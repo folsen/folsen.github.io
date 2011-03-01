@@ -39,6 +39,18 @@ body {
   padding-bottom: 0.3em;
 }
 
+h1, h2, h3 {
+  font-family: 'Bevan', Arial, Serif;
+  color: #444;
+	text-shadow: #DDD 1px 1px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+	padding-bottom:0px;
+	padding-top:35px;
+}
 
 h2 {
   font-size: 1.6em;
@@ -56,17 +68,6 @@ h3 {
   margin-bottom:5px;
 }
 
-h1 {
-  font-size: 2em;
-  font-weight: normal;
-	border-bottom: 1px solid #eee;
-}
-
-h1, .post, .link-post {
-  padding-bottom: 8px;
-	margin-bottom: 48px;
-}
-
 
 .link-post h2 {
   font-size: 1.4em;
@@ -75,7 +76,7 @@ h1, .post, .link-post {
 code {
   padding-left: 0.2em;
   padding-right: 0.2em;
-   -moz-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
 
@@ -99,7 +100,7 @@ a:hover {
 }
 
 .title a {
-  color: black;
+  color: #444;
   text-decoration: none;
   border: none;
   padding: 0;
@@ -168,6 +169,10 @@ ul#posts {
 
 /* Profile styles */
 
+a.fancybox, a#fancybox-close {
+  text-decoration:none;
+  border:none;
+}
 #profile-wrapper {
   width:750px;
   margin:auto;
@@ -175,17 +180,22 @@ ul#posts {
 .big-left-box, .big-top-box, .small-box {
   margin:15px;
 }
-.big-left-box, .big-top-box {
+.big-left-box, .big-top-box, .puzzle-text {
   color: #555;
   line-height:20px; 
 }
-.big-left-box div.title, .big-top-box div.title {
-  font-weight:bold;
-  float:left; 
+.puzzle-text {
+  float:left;
+  width:540px;
+  padding-left:10px;
 }
-.big-left-box div.year, .big-top-box div.year {
+.big-left-box div.title, .big-top-box div.title, .puzzle-text div.title {
+  float:left; 
+  font-family: 'Bevan';
+}
+.big-left-box div.year, .big-top-box div.year, .puzzle-text div.year {
   float:right;
-  font-weight:bold;
+  font-family: 'Bevan';
 }
 .big-left-box span.link, .big-top-box span.link {
   display:block;
@@ -202,11 +212,13 @@ ul#posts {
   float:left;
 }
 .big-frame {
-  background-color:black;
-  width:200px;
-  height:200px;
+  background-color:#323232;
+  width:180px;
+  height:180px;
   float:left;
-  -webkit-border-radius:15px;
+  padding:10px;
+  -webkit-border-radius:9px;
+  -moz-border-radius: 9px;
 }
 .big-text {
   width:190px;
@@ -214,10 +226,12 @@ ul#posts {
   padding-left:10px;
 }
 .small-frame {
-  background-color:black;
-  width:100px;
-  height:100px;
+  background-color:#323232;
+  width:80px;
+  height:80px;
   -webkit-border-radius:10px;
+  -moz-border-radius: 10px;
+  padding:10px;
 }
 .small-box {
   height:200px;
@@ -233,9 +247,10 @@ ul#posts {
   position:relative;
 }
 .small-text span.company {
-  font-weight:bold;
   display:block;
   text-align:center;
+  font-family: 'Bevan';
+  margin-top:5px;
 }
 .small-text div.year {
   font-size:12px;
@@ -245,6 +260,7 @@ ul#posts {
   margin-top:5px;
   position:absolute;
   bottom:0px;
+  font-family: 'Bevan';
 }
 .small-text div.tag {
   font-size:10px;
@@ -254,4 +270,16 @@ ul#posts {
   position:absolute;
   bottom:0px;
   right:0px;
+  font-family: 'Bevan';
+}
+span.code-link {
+  display:block;
+  text-align:center;
+  position:relative;
+  top:25px;
+}
+
+.hr {
+  border-top:1px solid #999;
+  border-bottom: 1px solid #DDD;
 }
