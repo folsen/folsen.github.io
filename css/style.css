@@ -177,6 +177,9 @@ a.fancybox, a#fancybox-close {
   width:750px;
   margin:auto;
 }
+.big-frame a, .small-frame a{
+  border:none;
+}
 .big-left-box, .big-top-box, .small-box {
   margin:15px;
 }
