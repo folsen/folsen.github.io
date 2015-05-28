@@ -1,269 +1,39 @@
 ---
 layout: default
-title: "Profile"
-description: "A summary of my coding."
 ---
-<h1>Professional projects</h1>
-<p>
-  This is just a small selection of work intended to showcase the change in technology and role over the years.
-</p>
-<div class="hr"></div>
 
-<div id="profile-wrapper">
+<main class="content" role="main">
 
-  <div class="big-left-box">
-    <div class="big-frame">
-      <a href="http://bdellium.com"><img src="/content/profile/bdellium-medium.png" title="Bdellium"></a>
-    </div><br style="clear:both;">
-    <div class="" style="padding-left:0px;padding-top:5px;">
-      <div style="margin-bottom:5px;"><div class="title">Bdellium</div><div class="year">2012-</div><br style="clear:both;"></div>
-      I am now Lead Developer at Bdellium where I'm responsible for a range of systems
-      programmed in Haskell, Clojure and Ruby on Rails. A lot of HPC and data-shuffling going on.
-      <span class="link"><a href="http://bdellium.com">Company Site</a></span>
+    <div class="cf frame">
+      {% for post in paginator.posts %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
     </div>
-  </div>
 
-  <div class="small-box">
-    <div class="small-frame">
-      <a href="http://bdellium.com"><img src="/content/profile/bdellium-small.png" title="Bdellium"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Bdellium</span>
-      <div>
-        Thesis project in statistical grouping of financial data.
-      </div>
-      <div class="year">2012</div><div class="tag">#Haskell</div>
-    </div>
-  </div>
+    <nav class="pagination" role="navigation">
+      {% if paginator.next_page %}
+        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+      {% endif %}
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <a class="older-posts" href="/">Newer posts &rarr;</a>
+        {% else %}
+          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+        {% endif %}
+      {% endif %}
+    </nav>
 
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/exceptional.png"><img src="/content/profile/exceptional-small.jpg" title="Exceptional"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Exceptional</span>
-      <div>
-        Architecture issues and Rails over at <a href="http://exceptional.io">Exceptional</a>.
-      </div>
-      <div class="year">2011</div><div class="tag">#Rails</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/rightrental.png"><img src="/content/profile/rightrental-small.jpg" title="RightRental"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">RightRental</span>
-      <div>
-        A horizontally scalable web-scraper built with Clojure.
-      </div>
-      <div class="year">2011</div><div class="tag">#Clojure</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/sportprofile.png"><img src="/content/profile/sportprofile-small.png" title="Sportprofile"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Sportprofile</span>
-      <div>
-        A full-featured community. Rails back-end work.
-      </div>
-      <div class="year">2010</div><div class="tag">#Rails</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/lunicore.png"><img src="/content/profile/lunicore-small.png" title="Lunicore"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Lunicore</span>
-      <div>Various PHP and Rails work at consulting firm.</div>
-      <div class="year">2009</div><div class="tag">#PHP</div>
-    </div>
-  </div>
-
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/suitcase.jpg"><img src="/content/profile/top-secret-small.png" title="Tetra Pak"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Tetra Pak</span>
-      Package specification database with web front-end.
-      <div class="year">2007</div><div class="tag">#ASP.NET</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/hultens.png"><img src="/content/profile/hultens-small.png" title="Hultens"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Hultens</span>
-      Webshop for local furniture store. Before CakePHP.
-      <div class="year">2005</div><div class="tag">#PHP</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/stanstad.png"><img src="/content/profile/stanstad-small.png" title="Stanstad"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">Stanstad</span>
-      <div>
-        Community and CMS for sports team.
-      </div>
-      <div class="year">2003</div><div class="tag">#ASP</div>
-    </div>
-  </div>
-  <br style="clear:both;">
-</div>
-</div>
-<h1>Weekend projects</h1>
-<p>
-  A selection of projects that have literally taken a weekend to complete. I like to experiment with new tech.
-</p>
-<div class="hr"></div>
-
-
-<div id="profile-wrapper">
-  <div class="big-left-box">
-    <div class="big-frame">
-      <a class="fancybox" href="/content/profile/bebot.png"><img src="/content/profile/bebot-small.png" title="bebot"></a>
-    </div><br style="clear:both;">
-    <div class="" style="padding-left:0px;padding-top:5px;">
-      <div style="margin-bottom:5px;"><div class="title">bebot</div><div class="year">2010</div><br style="clear:both;"></div>
-      A bot playing Facebook Bejeweled using a simple AI. Written in Clojure and implementing the java.awt.Robot class for OS interaction.
-      <span class="link"><a href="http://ique.github.com/bebot/">Info Site (with source)</a></span>
-    </div>
-  </div>
-
-  <div class="big-top-box">
-    <div class="big-frame">
-      <a class="fancybox" href="/content/profile/notmirc.png"><img src="/content/profile/notmirc-small.png" title="notmIRC"></a>
-    </div>
-    <div class="big-text">
-      <div style="margin-bottom:5px;"><div class="title">notmIRC</div><div class="year">2011</div><br style="clear:both;"></div>
-        A chat client written in CoffeeScript for Node.js using Express, Socket.IO and Mongoose for MongoDB connection. Made to resemble classic mIRC.
-      <span class="link"><a href="https://github.com/ique/notmIRC">view source</a></span>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/kanarecog.png"><img src="/content/profile/kanarecog-small.png" title="KanaRecog"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">KanaRecog</span>
-        Browser-game to let you train Hiragana and Katakana.
-        <span class="code-link"><a href="https://github.com/ique/KanaRecog">view source</a></span>
-      <div class="year">2010</div><div class="tag">#Rails</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/wordjumble.png"><img src="/content/profile/wordjumble-small.png" title="wordjumble"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">WordJumble</span>
-      Programming solution to a newspaper wordproblem.
-      <span class="code-link"><a href="/2010/12/old-ruby-vs-new-clojure/">view source</a></span>
-      <div class="year">2010</div><div class="tag">#Clojure</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/banzai.jpg"><img src="/content/profile/banzai-small.png" title="banzai"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">banzai</span>
-      Winning <a href="https://labs.ericsson.com/developer-community/blog/ericsson-labs-dreamhack">programming competition</a> entry.
-      <span class="code-link"><a href="https://github.com/ique/banzai">view source</a></span>
-      <div class="year">2009</div><div class="tag">#Rails</div>
-    </div>
-  </div>
-
-  <div class="small-box">
-    <div class="small-frame">
-      <a class="fancybox" href="/content/profile/mastermind.png"><img src="/content/profile/mastermind-small.png" title="mastermind"></a>
-    </div>
-    <div class="small-text">
-      <span class="company">mastermind</span>
-      <div>
-        EventMachine based telnet version of mastermind.
-        <span class="code-link"><a href="https://github.com/ique/mastermind">view source</a></span>
-      </div>
-      <div class="year">2008</div><div class="tag">#Ruby</div>
-    </div>
-  </div>
-  <br style="clear:both;">
-</div>
-
-<h1>Puzzle hunts</h1>
-<p>
-  I love solving challenges, and I love creating them. Creating Puzzle-Hunts is a way to satisfy both desires.
-</p>
-<div class="hr"></div>
-<div id="profile-wrapper" style="padding-top:15px;padding-bottom:20px">
-  <div>
-    <div class="big-frame">
-      <a class="fancybox" href="/content/profile/dhgame.png"><img src="/content/profile/dhgame-small.png" title="DH Game"></a>
-    </div>
-    <div class="puzzle-text">
-      <div style="margin-bottom:5px;"><div class="title">DH Game</div><div class="year">2005-2010</div><br style="clear:both;"></div>
-      Since 2005 until recently I have been arranging a <a href="http://en.wikipedia.org/wiki/Puzzlehunt">Puzzle-Hunt</a> at <a href="http://en.wikipedia.org/wiki/DreamHack">DreamHack</a>.
-      Since 2006 that has been together with <a href="http://eferm.com/projects">Emanuel Ferm</a>.<br><br>
-      During the years we have created a range of challenging adventures for our players. Check out the following links for examples.<br><br>
-      <a href="http://tetrisrockstar.com/dh-game-favorituppgifter">My favorite tasks from DHG 2009 (Swedish)</a><br>
-      <a href="http://eferm.com/the-game-3-0">Emanuels favorite tasks from DHG 2009 (English)</a>
-    </div>
-    <br style="clear:both;">
-  </div>
-  <div style="margin-top:15px;margin-bottom:15px;">
-    <div class="big-frame">
-      <a class="fancybox" href="/content/profile/ihunt.png"><img src="/content/profile/ihunt-small.png" title="iHunt"></a>
-    </div>
-    <div class="puzzle-text">
-      <div style="margin-bottom:5px;"><div class="title">iHunt</div><div class="year">2009</div><br style="clear:both;"></div>
-      The popularity of DH Game grew to the point where we were invited to hold a similar competition in the UK
-      at the <a href="http://iseries.multiplay.co.uk/">iSeries Multiplay</a> LAN event. We did this on two occasions in 2009.<br>
-      Check out some of our favorite tasks from these events below.<br>
-      <br>
-      <a href="http://eferm.com/the-game">Multiplay i-Hunt, August 2009</a><br>
-      <a href="http://eferm.com/the-game-2-0">Multiplay i-Hunt, November 2009</a>
-      
-    </div>
-    <br style="clear:both;">
-  </div>
-  <div>
-    <div class="big-frame">
-      <a class="fancybox" href="/content/profile/dekompile.png"><img src="/content/profile/dekompile-small.png" title="dekompile"></a>
-    </div>
-    <div class="puzzle-text">
-      <div style="margin-bottom:5px;"><div class="title">dekompile</div><div class="year">2010</div><br style="clear:both;"></div>
-      dekompile was aimed at being the toughest puzzle-hunt competition in Europe, 
-      fully living up to the name of it's San Francisco based ancestor <a href="http://en.wikipedia.org/wiki/The_Game_(treasure_hunt)">The Game</a>.
-      We didn't succeed to meet those standards because of some mistakes on our part, mostly marketing-wise. I hope to
-      some time in the future rectify those mistakes and try again. Check out the links below for some more info.<br>
-      <br>
-      <a href="http://tetrisrockstar.com/dekompile-one">Sample tasks and general information</a><br>
-      <a href="http://www.dekompile.com/">Official Website</a>
-      
-    </div>
-    <br style="clear:both;">
-  </div>
-</div>
-<h3>Various writings about code, few and far between</h3>
-<div class="hr"></div>
-<ul id="posts">
-  {% for post in site.posts %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-</ul>
-<div class="hr"></div>
-<br><br>
+</main>
